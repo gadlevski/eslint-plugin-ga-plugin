@@ -1,27 +1,32 @@
 # eslint-plugin-ga-plugin
 
-path checker
+Плагин для проверки импортов в архитектуре Feature Sliced Design
 
-## Installation
+## Установка
 
-You'll first need to install [ESLint](https://eslint.org/):
+Сначала вам нужно установить [ESLint](https://eslint.org/):
 
 ```sh
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-ga-plugin`:
+Далее, установите `eslint-plugin-ga-plugin`:
 
 ```sh
 npm install eslint-plugin-ga-plugin --save-dev
 ```
 
-## Usage
+## Использование
 
-Add `ga-plugin` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Добавьте `ga-plugin` в раздел плагинов вашего конфигурационного файла `.eslintrc`
 
-```json
-{
-  "plugins": ["ga-plugin"]
+```js
+// .eslintrc.js
+module.exports = {
+  plugins: ["ga-plugin"],
+  rules: {
+    "ga-plugin/path-checker": ["error", { alias: '@' }]
+  }
 }
 ```
+
