@@ -25,7 +25,8 @@ npm install eslint-plugin-ga-plugin --save-dev
 module.exports = {
   plugins: ["ga-plugin"],
   rules: {
-    "ga-plugin/path-checker": ["error", { alias: '@' }]
+    "ga-plugin/path-checker": ["error", { alias: '@' }],
+    "ga-plugin/public-api-imports": ["error", { alias: '@' }],
   }
 }
 ```
